@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система лояльности кафе</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Кафе "Вкусный уголок"</h1>
+      <p>Система лояльности для наших любимых клиентов</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card welcome-card">
+      <h2>Добро пожаловать в систему лояльности!</h2>
+      <p>Накапливайте баллы за каждый заказ и получайте приятные бонусы</p>
+
+      <div class="button-group">
+        <button onclick="window.location.href='login.html'">Войти</button>
+        <button onclick="window.location.href='register.html'">Зарегистрироваться</button>
+      </div>
+    </div>
+
+    <!-- Раздел новинок -->
+    <section class="section">
+      <h2 class="section-title">Новинки нашего меню</h2>
+      
+      <div class="coming-soon">
+        <h3>Скоро в нашем меню!</h3>
+        <p>Мы готовим для вас новые вкусные блюда. Следите за обновлениями!</p>
+        <p>Зарегистрируйтесь в системе лояльности, чтобы первыми узнавать о новинках и получать специальные предложения.</p>
+      </div>
+    </section>
+
+    <!-- Раздел популярных блюд -->
+    <section class="section">
+      <h2 class="section-title">Популярные блюда</h2>
+      <div class="food-items">
+        <div class="food-item">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Пицца">
+          <h3>Итальянская пицца</h3>
+          <p>Традиционная итальянская пицца с моцареллой, томатами и базиликом</p>
+        </div>
+        <div class="food-item">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Бургер">
+          <h3>Фирменный бургер</h3>
+          <p>Сочный бургер с говяжьей котлетой, сыром чеддер и свежими овощами</p>
+        </div>
+        <div class="food-item">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Паста">
+          <h3>Паста Карбонара</h3>
+          <p>Классическая итальянская паста с беконом, сливочным соусом и пармезаном</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Контактная информация -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Контактная информация</h3>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <span>ул. Примерная, 123, г. Москва</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-phone"></i></span>
+          <span>+7 (123) 456-78-90</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+          <span>info@vkusniy-ugolok.ru</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+          <span>@vkusniy_ugolok</span>
+        </div>
+      </div>
+      <div class="contact-hours">
+        <h3>Часы работы</h3>
+        <ul class="hours-list">
+          <li><span>Понедельник - Пятница:</span> <span>8:00 - 22:00</span></li>
+          <li><span>Суббота:</span> <span>9:00 - 23:00</span></li>
+          <li><span>Воскресенье:</span> <span>10:00 - 22:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Кафе "Вкусный уголок". Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Проверяем, авторизован ли пользователь
+    document.addEventListener('DOMContentLoaded', function() {
+      const token = localStorage.getItem('token');
+      if (token) {
+        // Если пользователь авторизован, перенаправляем в личный кабинет
+        window.location.href = 'dashboard.html';
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход - Система лояльности кафе</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Кафе "Вкусный уголок"</h1>
+      <p>Система лояльности для наших любимых клиентов</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Вход в систему</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" required>
+        </div>
+
+        <div class="error hidden" id="loginError"></div>
+
+        <button type="submit">Войти</button>
+      </form>
+
+      <a href="register.html" class="link">Нет аккаунта? Зарегистрироваться</a>
+      <a href="index.html" class="link">Вернуться на главную</a>
+    </div>
+  </div>
+
+  <!-- Контактная информация -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Контактная информация</h3>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <span>ул. Примерная, 123, г. Москва</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-phone"></i></span>
+          <span>+7 (123) 456-78-90</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+          <span>info@vkusniy-ugolok.ru</span>
+        </div>
+      </div>
+      <div class="contact-hours">
+        <h3>Часы работы</h3>
+        <ul class="hours-list">
+          <li><span>Понедельник - Пятница:</span> <span>8:00 - 22:00</span></li>
+          <li><span>Суббота:</span> <span>9:00 - 23:00</span></li>
+          <li><span>Воскресенье:</span> <span>10:00 - 22:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Кафе "Вкусный уголок". Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="auth.js"></script>
+</body>
+
+</html>
