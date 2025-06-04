@@ -251,3 +251,16 @@ button:hover {
     width: 100%;
   }
 }
+
+/* Стили для группы кнопок */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Увеличиваем расстояние между кнопками */
+}
+
+.button-group button {
+  width: 200px; /* Фиксированная ширина для кнопок */
+  padding: 12px 20px;
+  font-size: 16px;
+}
